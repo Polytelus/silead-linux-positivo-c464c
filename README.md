@@ -78,7 +78,8 @@ i2c_touchscreen_props=MSSL1680:touchscreen-min-x=5:touchscreen-min-y=12:touchscr
 
    ```bash
    sudo mkdir -p /mnt/efi
-   sudo mount /dev/sdX12 /boot/efi  # Adjust sdX12, mmcblkXp12
+   sudo lsblk -e7 # You'll need this to know where ChromeOS is installed. Check for any drive that isn't your USB and has 12 partitions.
+   sudo mount /dev/sdX12 /boot/efi  # Adjust X in sdX12, mmcblkXp12 for the correct drive number when you ran lsblk
    ```
 2. Edit `/mnt/efi/EFI/Boot/grub.cfg`:
 
@@ -103,7 +104,7 @@ i2c_touchscreen_props=MSSL1680:touchscreen-min-x=5:touchscreen-min-y=12:touchscr
 
    ```bash
    mkdir -p /mnt/EFI
-   mount /dev/mmcblk0p12 /mnt/EFI
+   mount /dev/mmcblkXp12 /mnt/EFI # Change X for mmcblk(number), if you don't know then refer to Mount EFI partition
    ```
 4. **Edit GRUB config**:
 
