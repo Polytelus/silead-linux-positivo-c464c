@@ -137,10 +137,9 @@ i2c_touchscreen_props=MSSL1680:touchscreen-min-x=5:touchscreen-min-y=12:touchscr
 
 ### Alternative Firmware & Calibration
 
-If you encounter persistent touch issues or require finer calibration, we strongly recommend exploring the [gsl-firmware repository](https://github.com/onitake/gsl-firmware) by Onitake. This project provides:
+If you encounter persistent touch issues or require finer calibration, I strongly recommend exploring the [gsl-firmware repository](https://github.com/onitake/gsl-firmware) by Onitake. The project provides:
 
-* Additional firmware variants for Goodix and Silead controllers.
-* User-friendly calibration utilities.
+* Additional firmware variants for Silead controllers.
 * Community-contributed fixes and enhancements.
 
 > **Credits:** The guide builds on the work of [onitake/gsl-firmware](https://github.com/onitake/gsl-firmware). All kudos to him.
